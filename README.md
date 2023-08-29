@@ -1,9 +1,25 @@
+<p align="center">
+
 Configure conforme sua necessidade, projeto local:
 -- Desenvolvendo sistema Documento Digital em Laravel 
 Local do projeto de Teste: C:\tools-xampphp\server\htdocs\workspace-laravel\document-digital-prometheus
 -- Comando seeder referente a permissões de usuarios
 :: php artisan make:seeder UserTableSeeder
 :: php artisan db:seed
+
+Configurar arquivo hosts do Windows
+127.0.0.1       documento
+
+Configurar arquivo no servidor XAMPP local: server\apache\conf\extra\httpd-vhosts.conf
+<VirtualHost *:80>
+    ServerAdmin kleber@galaxyz.com.br 
+    DocumentRoot "C:/tools-xampphp/server/htdocs/workspace-laravel/document-digital-prometheus-syscon"
+    ServerName documento
+    ServerAlias documento
+    ErrorLog "public"
+    CustomLog "public" common
+</VirtualHost>
+</p>
 
 -- Para abrir o projeto, mapear virtual hosts e hosts do windows:
 C:\tools-xampphp\server\htdocs\workspace-laravel\document-digital-prometheus-syscon/public
