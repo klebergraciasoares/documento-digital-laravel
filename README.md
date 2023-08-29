@@ -1,3 +1,13 @@
+Configure conforme sua necessidade, projeto local:
+-- Desenvolvendo sistema Documento Digital em Laravel 
+Local do projeto de Teste: C:\tools-xampphp\server\htdocs\workspace-laravel\document-digital-prometheus
+-- Comando seeder referente a permissões de usuarios
+:: php artisan make:seeder UserTableSeeder
+:: php artisan db:seed
+
+-- Para abrir o projeto, mapear virtual hosts e hosts do windows:
+C:\tools-xampphp\server\htdocs\workspace-laravel\document-digital-prometheus-syscon/public
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
