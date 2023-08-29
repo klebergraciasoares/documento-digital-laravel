@@ -10,7 +10,7 @@
 - [Configurar arquivo hosts do Windows
 - [127.0.0.1       documento
 
-- [Configurar arquivo no servidor XAMPP local: server\apache\conf\extra\httpd-vhosts.conf
+## Configurar arquivo no servidor XAMPP local: server\apache\conf\extra\httpd-vhosts.conf
 <VirtualHost *:80>
     ServerAdmin kleber@galaxyz.com.br 
     DocumentRoot "C:/tools-xampphp/server/htdocs/workspace-laravel/document-digital-prometheus-syscon"

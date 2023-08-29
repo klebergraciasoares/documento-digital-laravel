@@ -10,7 +10,6 @@ class Documento extends Model
     use HasFactory;
 
     protected $table = 'documento';
-
     protected $fillable = [
         'nome',
         'tipo_documento_id',
