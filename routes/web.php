@@ -13,13 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('/home', 'App\Http\Controllers\Admin\HomeController@index')->name('home');
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/pagina', [App\Http\Controllers\PaginaController::class, 'index'])->name('pagina');
 
 Route::middleware([
     'auth:sanctum',
