@@ -22,6 +22,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Colored status cards-->
         <div class="row gx-5">
             <div class="col-xxl-3 col-md-6 mb-5">
