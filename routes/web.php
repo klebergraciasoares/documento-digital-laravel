@@ -23,6 +23,9 @@ Auth::routes();
 
 Route::get('/pagina', [App\Http\Controllers\PaginaController::class, 'index'])->name('pagina');
 
+Route::get('/emails', [App\Http\Controllers\EmailController::class, 'index'])->name('emails.index');
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
