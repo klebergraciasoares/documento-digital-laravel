@@ -9,11 +9,137 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
     <!-- Scripts -->
     <link rel="preload" as="style" href="http://192.168.1.117:8000/build/assets/app-9b35bda6.css" />
     <link rel="modulepreload" href="http://192.168.1.117:8000/build/assets/app-43c05ea5.js" />
     <link rel="stylesheet" href="http://192.168.1.117:8000/build/assets/app-9b35bda6.css" />
     <script type="module" src="http://192.168.1.117:8000/build/assets/app-43c05ea5.js"></script>
+
+
+
+    <!-- Google Chart start -->
+    <!-- Fonte de dados: https://developers.google.com/chart/interactive/docs/basic_multiple_charts?hl=pt-br -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load Charts and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Draw the pie chart for Sarah's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawSarahChart);
+
+      // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+      google.charts.setOnLoadCallback(drawAnthonyChart);
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that draws the pie chart for Sarah's pizza.
+      function drawSarahChart() {
+
+        // Create the data table for Sarah's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Mercado Livre', 1],
+          ['Americanas', 1],
+          ['Submarino', 2],
+          ['Olist', 2],
+          ['Amazon', 1]
+        ]);
+
+        // Set options for Sarah's pie chart.
+        var options = {title:'MarketPlace - Vendas por Dia',
+                       width:400,
+                       height:300};
+
+        // Instantiate and draw the chart for Sarah's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Sarah_chart_div'));
+        chart.draw(data, options);
+      }
+
+      // Callback that draws the pie chart for Anthony's pizza.
+      function drawAnthonyChart() {
+
+        // Create the data table for Anthony's pizza.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Mercado Livre', 2],
+          ['Americanas', 2],
+          ['Submarino', 2],
+          ['Olist', 0],
+          ['Amazon', 3]
+        ]);
+
+        // Set options for Anthony's pie chart.
+        var options = {title:'MarketPlace - Vendas por Mês',
+                       width:400,
+                       height:300};
+
+        // Instantiate and draw the chart for Anthony's pizza.
+        var chart = new google.visualization.PieChart(document.getElementById('Anthony_chart_div'));
+        chart.draw(data, options);
+      }
+
+
+
+
+
+      // Barchart
+    function drawChart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+        ['Mercado Livre', 3],
+        ['Americanas', 1],
+        ['Submarino', 1],
+        ['Olist', 1],
+        ['Amazon', 2]
+        ]);
+
+        var piechart_options = {title:'MerketPlace - Comparador Venda Mês',
+                    width:400,
+                    height:300};
+        var piechart = new google.visualization.PieChart(document.getElementById('piechart_div'));
+        piechart.draw(data, piechart_options);
+
+        var barchart_options = {title:'Barchart: Evolução Comparador',
+                    width:400,
+                    height:300,
+                    legend: 'none'};
+        var barchart = new google.visualization.BarChart(document.getElementById('barchart_div'));
+        barchart.draw(data, barchart_options);
+    }
+
+    </script>
+    <!-- Google Chart end -->
+
+
+
+
+    <!-- Admin LTE 2023
+    <link type="text/css" href="http://192.168.1.117:8000/build/assets/css/vendor-morris.css" rel="stylesheet">
+    <link type="text/css" href="http://192.168.1.117:8000/build/assets/css/vendor-bootstrap-datepicker.css" rel="stylesheet">
+    -->
+
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <!-- App CSS -->
+    <link type="text/css" href="http://192.168.1.117:8000/build/assets/css/app.css" rel="stylesheet">
+    <link type="text/css" href="http://192.168.1.117:8000/build/assets/css/app.rtl.css" rel="stylesheet">
+
+    <!-- Simplebar -->
+    <link type="text/css" href="http://192.168.1.117:8000/build/assets/vendor/simplebar.css" rel="stylesheet">
+    <!-- End - Admin LTE 2023 -->
+
     <!-- Styles -->
 
 
