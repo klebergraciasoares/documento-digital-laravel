@@ -733,7 +733,7 @@ background-size: 85% 100%; background-repeat: no-repeat;">
                         <x-slot name="content">
                             <!-- Account Management -->
                             <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Manage Account') }}
+                                {{ __('Gerenciar Perfil') }}
                             </div>
 
                             <x-dropdown-link href="{{ route('profile.show') }}">
@@ -745,6 +745,11 @@ background-size: 85% 100%; background-repeat: no-repeat;">
                                     {{ __('API Tokens') }}
                                 </x-dropdown-link>
                             @endif
+
+                            <!--<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Configurações</button> -->
+                            <x-dropdown-link data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" >
+                                {{ __('Configurações') }}
+                            </x-dropdown-link>
 
                             <div class="border-t border-gray-200"></div>
 

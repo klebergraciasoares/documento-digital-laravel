@@ -4,15 +4,29 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Auth;
 
 class PaginaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.index');
+
+        // Get input data
+        $email    = $request->input('email', null);
+        $password = $request->input('password', null);
+
+        // Attempt login with input data
+        $result = Auth::attempt(array('email' => $email, 'password' => $password));
+
+        if($result){
+            $verify = 'admin.index';
+        }else{
+            $verify = 'welcome';
+        }
+        return view($verify);
     }
 
     /**
