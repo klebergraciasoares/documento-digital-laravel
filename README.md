@@ -4,15 +4,15 @@ Para configurar, abra o arquivo layout.blade.php que esta em:
 document-digital-prometheus-syscon\resources\views\components
 e edite as linhas:
 
-<!-- Scripts -->
-<link rel="preload" as="style" href="http://192.168.1.117:8000/build/assets/app-9b35bda6.css" />
-<link rel="modulepreload" href="http://192.168.1.117:8000/build/assets/app-43c05ea5.js" />
-<link rel="stylesheet" href="http://192.168.1.117:8000/build/assets/app-9b35bda6.css" />
-<script type="module" src="http://192.168.1.117:8000/build/assets/app-43c05ea5.js"></script>
+
+href="http://192.168.1.117:8000/build/assets/app-9b35bda6.css" />
+href="http://192.168.1.117:8000/build/assets/app-43c05ea5.js" />
+href="http://192.168.1.117:8000/build/assets/app-9b35bda6.css" />
+src="http://192.168.1.117:8000/build/assets/app-43c05ea5.js">
 
 
 </p>
-
+<br/>
 <p align="center">
 
 - [Configure conforme sua necessidade, projeto local:
