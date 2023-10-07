@@ -1,8 +1,8 @@
 ## Acessar o sistema
-<p align="center">]
+<p align="center">
 Efetue o login e redirecione para a rota pagina
 </p>
-<img src="/storage/app/public/images/pagina-principal.PNG"> 
+<img src="https://galaxyz.com.br/PROMETHEUS/img/cropped-galaxyzdobrasillogo-blog.png">  
 
 ## Configurar Tema do CSS
 <p align="center">
