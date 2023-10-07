@@ -10,11 +10,15 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+    <?Php
+        //echo($_SERVER['REMOTE_ADDR']);
+    ?>
+
     <!-- Scripts -->
-    <link rel="preload" as="style" href="http://192.168.1.117:8000/build/assets/app-9b35bda6.css" />
-    <link rel="modulepreload" href="http://192.168.1.117:8000/build/assets/app-43c05ea5.js" />
-    <link rel="stylesheet" href="http://192.168.1.117:8000/build/assets/app-9b35bda6.css" />
-    <script type="module" src="http://192.168.1.117:8000/build/assets/app-43c05ea5.js"></script>
+    <link rel="preload" as="style" href="http://192.168.0.59:8000/build/assets/app-9b35bda6.css" />
+    <link rel="modulepreload" href="http://192.168.0.59:8000/build/assets/app-43c05ea5.js" />
+    <link rel="stylesheet" href="http://192.168.0.59:8000/build/assets/app-9b35bda6.css" />
+    <script type="module" src="http://192.168.0.59:8000/build/assets/app-43c05ea5.js"></script>
 
 
 

@@ -14,6 +14,7 @@ class PaginaController extends Controller
     public function index(Request $request)
     {
 
+        //dd($request);
         // Get input data
         $email    = $request->input('email', null);
         $password = $request->input('password', null);
@@ -21,12 +22,15 @@ class PaginaController extends Controller
         // Attempt login with input data
         $result = Auth::attempt(array('email' => $email, 'password' => $password));
 
+        /*
         if($result){
             $verify = 'admin.index';
         }else{
             $verify = 'welcome';
         }
         return view($verify);
+        */
+        return view('admin.index');
     }
 
     /**

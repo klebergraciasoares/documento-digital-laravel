@@ -1,8 +1,14 @@
-## Tema do CSS
+## Acessar o sistema
+<p align="center">]
+Efetue o login e redirecione para a rota pagina
+</p>
+<img src="/storage/app/public/images/pagina-principal.PNG"> 
+
+## Configurar Tema do CSS
 <p align="center">
 Para configurar, abra o arquivo layout.blade.php que esta em:
 document-digital-prometheus-syscon\resources\views\components
-e edite as linhas:
+e edite as linhas abaixo e coloque o seu IP
 
 
 href="http://192.168.1.117:8000/build/assets/app-9b35bda6.css" />
