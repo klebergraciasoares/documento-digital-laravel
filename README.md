@@ -1,8 +1,27 @@
+## Acessando views Mysql Laravel
+<p align="center">
+https://www.youtube.com/watch?v=jHMGphmGD2k
+</p>
+
+
+## Charts open source
+
+<p align="center">
+https://www.chartjs.org/docs/latest/
+</p>
+<p align="center">
+https://d3js.org/
+</p>
+<p align="center">
+https://developers-dot-devsite-v2-prod.appspot.com/chart/interactive/docs/gallery?hl=pt-br
+</p>
+
+
 ## Acessar o sistema
 <p align="center">
-Efetue o login e redirecione para a rota pagina
+Página principal do Sistema.
 </p>
-<img src="https://galaxyz.com.br/PROMETHEUS/img/cropped-galaxyzdobrasillogo-blog.png">  
+<img src="https://galaxyz.com.br/images/document-digital-prometheus-syscon/pagina-principal.PNG">  
 
 ## Configurar Tema do CSS
 <p align="center">

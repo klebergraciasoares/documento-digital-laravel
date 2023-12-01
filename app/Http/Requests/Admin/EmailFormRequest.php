@@ -19,10 +19,11 @@ class EmailFormRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
      */
-    public function rules(): array
+    public function rules()
     {
+        $id = $this->segment(2);
         return [
-            'email' => 'required|email'
+            'email' => "required|email|max:150|unique:email,email,{$id},id"
         ];
     }
 }

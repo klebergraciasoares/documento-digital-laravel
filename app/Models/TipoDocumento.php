@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class TipoDocumento extends Model
 {
     use HasFactory;
-
+    public $timestamps = false;
     protected $table = 'tipo_documento';
+    protected $primaryKey = 'id';
     protected $fillable = [
         'nome'
     ];

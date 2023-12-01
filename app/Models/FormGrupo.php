@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +11,9 @@ class FormGrupo extends Model
     use HasFactory;
 
     protected $table = 'form_grupo';
+
+    public $timestamps = false;
+
     protected $fillable = [
         'form_id',
         'grupo_id',
@@ -17,5 +21,10 @@ class FormGrupo extends Model
         'altera',
         'exclui'
     ];
+
+    public function form()
+    {
+        return $this->belongsTo('App\Models\Form');
+    }
 
 }

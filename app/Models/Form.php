@@ -10,6 +10,9 @@ class Form extends Model
     use HasFactory;
 
     protected $table = 'form';
+
+    public $timestamps = false;
+
     protected $fillable = [
         'nome'
     ];

@@ -10,6 +10,9 @@ class Grupo extends Model
     use HasFactory;
 
     protected $table = 'grupo';
+
+    public $timestamps = false;
+
     protected $fillable = [
         'nome'
     ];

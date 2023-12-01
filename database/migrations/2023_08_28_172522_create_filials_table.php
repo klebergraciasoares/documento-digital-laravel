@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('filial', function (Blueprint $table) {
             $table->id();
             $table->string('nome', 200)->unique();
+            $table->string('codigo', 200)->unique();
         });
     }
 

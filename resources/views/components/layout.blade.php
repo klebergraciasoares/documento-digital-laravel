@@ -11,14 +11,18 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <?Php
-        //echo($_SERVER['REMOTE_ADDR']);
+        $meuIp = $_SERVER['REMOTE_ADDR'];
+        $app_9b35bda6 =     'http://'.$meuIp.':8000/build/assets/app-9b35bda6.css';
+        $app_43c05ea5 =     'http://'.$meuIp.':8000/build/assets/app-43c05ea5.js';
+        $app_9b35bda6_2 =   'http://'.$meuIp.':8000/build/assets/app-9b35bda6.css';
+        $app_43c05ea5_2 =   'http://'.$meuIp.':8000/build/assets/app-43c05ea5.js';
     ?>
 
     <!-- Scripts -->
-    <link rel="preload" as="style" href="http://192.168.0.59:8000/build/assets/app-9b35bda6.css" />
-    <link rel="modulepreload" href="http://192.168.0.59:8000/build/assets/app-43c05ea5.js" />
-    <link rel="stylesheet" href="http://192.168.0.59:8000/build/assets/app-9b35bda6.css" />
-    <script type="module" src="http://192.168.0.59:8000/build/assets/app-43c05ea5.js"></script>
+    <link rel="preload" as="style" href="<?php echo($app_9b35bda6); ?>" />
+    <link rel="modulepreload" href="<?php echo($app_43c05ea5); ?>" />
+    <link rel="stylesheet" href="<?php echo($app_9b35bda6_2); ?>" />
+    <script type="module" src="<?php echo($app_43c05ea5_2); ?>"></script>
 
 
 
@@ -121,27 +125,31 @@
         barchart.draw(data, barchart_options);
     }
 
+
     </script>
     <!-- Google Chart end -->
-
-
-
 
     <!-- Admin LTE 2023
     <link type="text/css" href="http://192.168.1.117:8000/build/assets/css/vendor-morris.css" rel="stylesheet">
     <link type="text/css" href="http://192.168.1.117:8000/build/assets/css/vendor-bootstrap-datepicker.css" rel="stylesheet">
     -->
 
-
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots" content="noindex">
 
+    <?Php
+        //$meuIp = $_SERVER['REMOTE_ADDR'];
+        $app        = 'http://'.$meuIp.':8000/build/assets/css/app.css';
+        $app_rtl    = 'http://'.$meuIp.':8000/build/assets/css/app.rtl.css';
+        $simplebar  = 'http://'.$meuIp.':8000/build/assets/vendor/simplebar.css';
+    ?>
+
     <!-- App CSS -->
-    <link type="text/css" href="http://192.168.1.117:8000/build/assets/css/app.css" rel="stylesheet">
-    <link type="text/css" href="http://192.168.1.117:8000/build/assets/css/app.rtl.css" rel="stylesheet">
+    <link type="text/css" href="<?php echo($app); ?>" rel="stylesheet">
+    <link type="text/css" href="<?php echo($app_rtl); ?>" rel="stylesheet">
 
     <!-- Simplebar -->
-    <link type="text/css" href="http://192.168.1.117:8000/build/assets/vendor/simplebar.css" rel="stylesheet">
+    <link type="text/css" href="<?php echo($simplebar); ?>" rel="stylesheet">
     <!-- End - Admin LTE 2023 -->
 
     <!-- Styles -->
@@ -151,12 +159,17 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">-->
     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+    -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css') }}">
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>-->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 
@@ -267,6 +280,70 @@
         */
 
 
+
+
+
+
+        .progress-container {
+  position: relative;
+}
+
+.progress-bar {
+}
+
+.progress-bar:before {
+  content: "0";
+  position: absolute;
+  left: 2px;
+  bottom: 60px;
+  font-size: 12px;
+  color: rgba(98, 107, 114, 1);
+}
+
+.progress-bar:after {
+  content: "600";
+  position: absolute;
+  right: -6px;
+  bottom: 60px;
+  font-size: 12px;
+  color: rgba(98, 107, 114, 1);
+}
+
+.widget {
+  padding: 25px;
+  margin: 0 auto;
+  width: 150px;
+  margin-top: 25px;
+  background-color: #fff;
+  -background-color: #222d3a;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.points {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(98, 107, 114, 1);
+  font-size: 12px;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #f3f3f3;
+    background-color: #010e81;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.form2{ /*background-color:#ebf3fa; width: 100%; height: 190px; margin: auto;
+  margin-top: 12px; text-align: center; padding-top: 30px; border-radius: 10px; border: 1px #ccc solid;
+  */
+}
+
     </style>
 
 </head>
@@ -370,14 +447,14 @@ background-size: 85% 100%; background-repeat: no-repeat;">
 
                 <!-- Logo Primeira Página -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('pagina') }}">
                         <x-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-nav-link href="{{ route('pagina') }}" :active="request()->routeIs('pagina')">
                         {{ __('Home') }}
                     </x-nav-link>
                 </div>
@@ -400,7 +477,7 @@ background-size: 85% 100%; background-repeat: no-repeat;">
 
 
 
-                <!-- Productdb Productws and products Test -->
+                <!-- MENU DASHBOARD -->
                 <div class="hidden sm:flex sm:items-center sm:ml-6">
                     <!-- Teams Dropdown -->
                     <!-- Settings Dropdown -->
@@ -426,14 +503,14 @@ background-size: 85% 100%; background-repeat: no-repeat;">
                             <x-slot name="content">
                                 <!-- Account Management -->
                                 <div class="block px-4 py-2 text-xs text-gray-400">
-                                    Gerenciar Produtos
+                                    Gerenciar Empresa
                                 </div>
 
-                                <x-dropdown-link href="/productdb">
+                                <x-dropdown-link href="{{ url('/emails')}}">
                                     E-Mail
                                 </x-dropdown-link>
 
-                                <x-dropdown-link href="/product" >
+                                <x-dropdown-link href="/setores" >
                                     Setor
                                 </x-dropdown-link>
 
@@ -443,7 +520,7 @@ background-size: 85% 100%; background-repeat: no-repeat;">
                                 </button>
                                 -->
 
-                                <x-dropdown-link href="/teste">
+                                <x-dropdown-link href="/filiais">
                                     Filial
                                 </x-dropdown-link>
 
@@ -466,7 +543,7 @@ background-size: 85% 100%; background-repeat: no-repeat;">
                                     </x-dropdown-link>
                                 </form>
                             -->
-                            <x-dropdown-link href="/teste">
+                            <x-dropdown-link href="/tipoDocumentos">
                                 Tipo Documento
                             </x-dropdown-link>
 
@@ -547,8 +624,12 @@ background-size: 85% 100%; background-repeat: no-repeat;">
                             </div>
 
 
-                            <x-dropdown-link href="/routes">
-                                Documento
+                            <x-dropdown-link href="/grupos">
+                                Grupo de Usuários
+                            </x-dropdown-link>
+
+                            <x-dropdown-link href="#">
+                                Usuários
                             </x-dropdown-link>
 
 
@@ -897,6 +978,97 @@ background-size: 85% 100%; background-repeat: no-repeat;">
         {{ $slot }}
 </div>
 
+
+<script type="text/javascript" src="https://www.codehim.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"></script>
+
+
+
+<script>
+function openModalAndSendData(a){
+    //var clicado0 = $('#setEmail').val(a);
+    //alert('clicado0.... ' +clicado0);
+
+}
+
+$('#myModalEmailNew').on('shown.bs.modal', function (e) {
+        $('input[name="email"]').focus();
+})
+
+$('#myModalSetorNew').on('shown.bs.modal', function (e) {
+        $('input[name="nome"]').focus();
+})
+
+$('#myModalFilialNew').on('shown.bs.modal', function (e) {
+        $('input[name="codigo"]').focus();
+})
+
+$('#myModalTipoDocumentoNew').on('shown.bs.modal', function (e) {
+        $('input[name="nome"]').focus();
+})
+
+$('#myModalGrupoNew').on('shown.bs.modal', function (e) {
+        $('input[name="nome"]').focus();
+})
+
+$('#myModalEmailEdit').on('shown.bs.modal', function (e) {
+        //alert('Dentro com e...' +e);
+        var clicado = $('#setEmail').val();
+        //alert('clicado.... ' +clicado);
+        $('input[name="email"]').focus();
+        $('input[name="email"]').val(clicado);
+})
+
+//$('#myModalSetorEdit').on('shown.bs.modal', function (e) {
+        //alert('Dentro com e...' +e);
+        //var clicado = $('#setNome').val();
+        //alert('clicado.... ' +clicado);
+        //$('input[name="nome"]').focus();
+        //$('input[name="nome"]').val(clicado);
+//})
+
+
+$(document).ready(function(){
+    setTimeout(function() {
+	$(".alert").fadeOut("slow", function(){
+		$(this).alert('close');
+	});
+    }, 5000);
+});
+
+/*
+$(document).ready(function() {
+    $("#btnFetch").click(function() {
+      // disable button
+      $(this).prop("disabled", true);
+      // add spinner to button
+      $(this).html(
+        `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
+      );
+    });
+});
+*/
+$(document).ready(function() {
+    $("#btnFetch").click(function() {
+      // disable button
+      $(this).prop("disabled", true);
+      // add spinner to button
+      $(this).html(
+        `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Aguarde...`
+      );
+
+      setTimeout(function(){
+        /*submit the form after 5 secs*/
+        $('#testForm').submit();
+    },1000)
+
+    });
+});
+
+
+
+
+
+</script>
 
 
 </body>
