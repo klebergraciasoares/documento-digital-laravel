@@ -41,6 +41,15 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+
+    public function index(Request $request)
+    {
+
+        $grupos = $this->grupo
+        ->orderBy('nome', 'ASC')->get();
+        return view('user.register', ['grupos' => $grupos]);
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -64,10 +73,15 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+        $grupoId = empty($data['grupo_id']) ? '5' : $data['grupo_id'];
+
+        // TODO grupo_id tem que ser operador
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'grupo_id' => $grupoId,
         ]);
     }
 }

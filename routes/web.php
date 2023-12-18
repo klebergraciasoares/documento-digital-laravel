@@ -83,6 +83,14 @@ Route::any('/permissoes/{id}/update', [App\Http\Controllers\Admin\PermissaoContr
 Route::get('/permissoes/{id}/destroy', [App\Http\Controllers\Admin\PermissaoController::class, 'destroy'])->middleware(['auth'])->name('permissoes.destroy');
 
 
+Route::resource("/usuarios", App\Http\Controllers\Admin\UserController::class);
+Route::delete('/usuarios/destroy', [App\Http\Controllers\Admin\UserController::class, 'destroy'])->middleware(['auth'])->name('usuarios.destroy');
+Route::get('/usuarios/searchUsuario', [App\Http\Controllers\Admin\UserController::class, 'searchUsuario'])->middleware(['auth'])->name('usuarios.searchUsuario');
+Route::any('/usuarios/store', [App\Http\Controllers\Admin\UserController::class, 'store'])->middleware(['auth'])->name('usuarios.store');
+Route::get('/usuarios/{id}/edit', [App\Http\Controllers\Admin\UserController::class, 'edit'])->middleware(['auth'])->name('usuarios.edit');
+
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

@@ -306,7 +306,7 @@ class EmailController extends Controller
                 ->withErrors(['errors' => 'Busca não encontrada. '.$dataForm['term']])
                 ->withInput();
         }else{
-            return view('admin.email.index', ['emails' => $emails, 'dataForm' => $dataForm]);
+            return view('admin.email.index', ['setores' => $emails, 'dataForm' => $dataForm]);
         }
 
     }

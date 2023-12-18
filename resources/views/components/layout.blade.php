@@ -628,7 +628,7 @@ background-size: 85% 100%; background-repeat: no-repeat;">
                                 Grupo de Usuários
                             </x-dropdown-link>
 
-                            <x-dropdown-link href="#">
+                            <x-dropdown-link href="/usuarios">
                                 Usuários
                             </x-dropdown-link>
 
@@ -1008,6 +1008,10 @@ $('#myModalTipoDocumentoNew').on('shown.bs.modal', function (e) {
 
 $('#myModalGrupoNew').on('shown.bs.modal', function (e) {
         $('input[name="nome"]').focus();
+})
+
+$('#myModalUsuarioNew').on('shown.bs.modal', function (e) {
+        $('input[name="name"]').focus();
 })
 
 $('#myModalEmailEdit').on('shown.bs.modal', function (e) {

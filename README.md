@@ -1,3 +1,8 @@
+## Exemplo de tela de páginação super rápido
+<p align="center">
+https://bandit.network/app
+</p>
+
 ## Acessando views Mysql Laravel
 <p align="center">
 https://www.youtube.com/watch?v=jHMGphmGD2k
